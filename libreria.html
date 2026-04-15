@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en" data-bs-theme="dark">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Libreria Epicode</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body class="text-center mt-5">
+    <header>
+      <h1 class="mb-5">Libreria Epicode</h1>
+    </header>
+    <main>
+      <!-- Inizio sezione carrello  -->
+      <div class="container mb-5">
+        <div class="row justify-content-center">
+          <div class="col-md-8 text-start">
+            <h3 class="text-center">Il tuo Carrello</h3>
+            <ul id="lista-carrello" class="list-group shadow"></ul>
+          </div>
+        </div>
+      </div>
+
+      <div
+        class="modal fade"
+        id="successModal"
+        tabindex="-1"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title">Ottima scelta!</h5>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="modal-body">
+              <p id="modal-message"></p>
+            </div>
+            <div class="modal-footer">
+              <button
+                type="button"
+                class="btn btn-primary"
+                data-bs-dismiss="modal"
+              >
+                Continua
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- FIne sezione carrello  -->
+    </main>
+    <!-- Inizio libreria dinamica -->
+    <div class="container">
+      <div id="book-row" class="row g-4"></div>
+    </div>
+    <!-- Fine libreria dinamica -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./libreria.js"></script>
+  </body>
+</html>
