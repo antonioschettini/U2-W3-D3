@@ -51,7 +51,7 @@ getLibreria();
 let carrello = JSON.parse(localStorage.getItem("carrello-epicode")) || [];
 
 // Funzione per mostrare il carrello all'avvio
-const renderCarrello = function () {
+const visualizzaCarrello = function () {
   const lista = document.getElementById("lista-carrello");
   lista.innerHTML = ""; // Svuoto la lista
 
@@ -73,7 +73,7 @@ const aggiungiAlCarrello = function (titolo, prezzo) {
 
   // Salviamo nel browser in localStorage
   localStorage.setItem("carrello-epicode", JSON.stringify(carrello));
-  renderCarrello();
+  visualizzaCarrello();
 
   // Mostro il modale con nome del libro
   document.getElementById("modal-message").innerText =
@@ -88,8 +88,8 @@ const aggiungiAlCarrello = function (titolo, prezzo) {
 const rimuoviDalCarrello = function (index) {
   carrello.splice(index, 1); // rimuove il primo elemento
   localStorage.setItem("carrello-epicode", JSON.stringify(carrello));
-  renderCarrello();
+  visualizzaCarrello();
 };
 
 // Lancio la funzione per caricare il carrello in localstorage
-renderCarrello();
+visualizzaCarrello();
